@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.smarteist.autoimageslider.SliderView;
 
@@ -17,6 +18,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     SliderView sliderView;
+    TextView textView;
     SliderView sliderView2;
     SliderView sliderView3;
     List<ImageSliderModel> imageSliderModelList, imageSliderModelList2, imageSliderModelList3;
@@ -28,11 +30,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         imageSliderModelList = new ArrayList<>();
         sliderView = findViewById(R.id.imageSlider);
-
+        textView=findViewById(R.id.data1);
         imageSliderModelList.add(new ImageSliderModel(R.drawable.a));
         imageSliderModelList.add(new ImageSliderModel(R.drawable.b));
         imageSliderModelList.add(new ImageSliderModel(R.drawable.c));
-
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Detail.class));
+            }
+        });
         sliderView.setSliderAdapter(new ImageSliderAdapter(this, imageSliderModelList));
 
         imageSliderModelList2 = new ArrayList<>();
