@@ -332,10 +332,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Buy"
+                    android:id="@+id/clickBuy"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
                     android:textColor="#ffffff"
                     android:textSize="25dp"
+<<<<<<< Updated upstream
                     app:fontFamily="sans-serif-medium" />
+=======
+                    app:fontFamily="sans-serif-medium"
+                    />
+>>>>>>> Stashed changes
 
             </LinearLayout>
 

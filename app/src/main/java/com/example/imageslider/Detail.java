@@ -55,20 +55,13 @@ public class Detail extends AppCompatActivity  {
 //                startActivity(i);
 //            }
 //        });
-//        TextView buyLay = (TextView) findViewById(R.id.buyLayout);
-//        buyLay.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(getApplicationContext(), price_cal.class);
-////              startActivity(i);
-//            }
-//        });
-        LinearLayout linearLayout=findViewById(R.id.buyLayout);
-        linearLayout.setOnClickListener(new View.OnClickListener() {
+        LinearLayout buyLay = (LinearLayout) findViewById(R.id.buyLayout);
+        buyLay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),price_cal.class));
-                Log.d("vipin","we are here ");
+                Intent i = new Intent(getApplicationContext(), price_cal.class);
+                Log.d("Palak", "We are here!");
+                startActivity(i);
             }
         });
 
