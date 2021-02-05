@@ -15,9 +15,12 @@ public class price_cal extends AppCompatActivity {
         EditText area = (EditText) findViewById(R.id.editText);
         TextView result = (TextView) findViewById(R.id.TotalPrice);
 
-        int num1 = Integer.parseInt(area.getText().toString());
-        //Result = (Total Price/Total area)*req area
-        int Result = 100*num1;
-        result.setText("Rs " + Result + "");
-    }
+
+        String num = area.getText().toString();
+            if(!num.isEmpty()) {
+                result.setText(num);
+            }
+            }
+            //int n=Integer.parseInt(num);
+            //result.setText("Rs"+n);
 }

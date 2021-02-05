@@ -7,10 +7,12 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Layout;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
@@ -20,9 +22,6 @@ import javax.xml.transform.Result;
 
 public class Detail extends AppCompatActivity  {
 //    BottomNavigationView bottomNavigationView;
-
-
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +63,14 @@ public class Detail extends AppCompatActivity  {
 ////              startActivity(i);
 //            }
 //        });
+        LinearLayout linearLayout=findViewById(R.id.buyLayout);
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),price_cal.class));
+                Log.d("vipin","we are here ");
+            }
+        });
 
     }
 
